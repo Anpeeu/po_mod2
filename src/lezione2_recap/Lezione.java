@@ -27,8 +27,10 @@ import java.util.Collections;
 
 */
 public class Lezione{
+    /* MDOFICA DELLA LEZIONE 4*/
+    public interface Creature{}
 
-    public static class Animal{
+    public static class Animal implements Creature{
         protected int  weight;
 
         public Animal(int weight){
@@ -36,6 +38,9 @@ public class Lezione{
         }
         public void eat(Animal a){
             weight += a.weight;
+        }
+        public Animal getPartner(){
+            return this;
         }
     }
 
@@ -47,9 +52,18 @@ public class Lezione{
             this.color = c;
         }
 
+
+        /**
+         *
+         * @param a Modificato in Creature nella lezione 4
+         */
+        public void eat(Creature a) {
+            weight += 10;
+        }
+
         @Override
-        public void eat(Animal a) {
-            weight += a.weight / 2;
+        public Dog getPartner() {
+            return this;
         }
 
         public void bark(){
@@ -84,6 +98,7 @@ public class Lezione{
         public void meow() {
             System.out.println("WRYYYYYYYYY");
         }
+
     }
 
     public static void main(String[] args) {
