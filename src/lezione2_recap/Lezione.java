@@ -32,24 +32,29 @@ public class Lezione{
 
     public static class Animal implements Creature{
         protected int  weight;
+        protected Animal partner;
 
-        public Animal(int weight){
+        public Animal(int weight, Animal p ){
             this.weight = weight;
+            this.partner = p;
         }
         public void eat(Animal a){
             weight += a.weight;
         }
         public Animal getPartner(){
-            return this;
+            return this.partner;
         }
     }
 
     public static class Dog extends Animal{
         private String color;
+        private Dog newPartner
 
-        public Dog(int w,String c){
-            super(w);
+        public Dog(int w,String c, Dog partner){
+            super(w, partner);
             this.color = c;
+            this.newPartner = partner;
+
         }
 
 
@@ -61,9 +66,10 @@ public class Lezione{
             weight += 10;
         }
 
+        // LEZIONE 4 MODIFICA
         @Override
         public Dog getPartner() {
-            return this;
+            return newPartner;
         }
 
         public void bark(){
