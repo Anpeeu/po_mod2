@@ -38,6 +38,14 @@ public class Lezione{
             this.weight = weight;
             this.partner = p;
         }
+
+        public Animal(int w) {
+        }
+
+        public Animal() {
+
+        }
+
         public void eat(Animal a){
             weight += a.weight;
         }
@@ -48,13 +56,17 @@ public class Lezione{
 
     public static class Dog extends Animal{
         private String color;
-        private Dog newPartner
+        private Dog newPartner;
 
         public Dog(int w,String c, Dog partner){
             super(w, partner);
             this.color = c;
             this.newPartner = partner;
 
+        }
+
+        public Dog(int i, String bruno) {
+            super();
         }
 
 

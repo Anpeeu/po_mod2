@@ -1,6 +1,4 @@
-package lezione5_;
-
-import java.util.Collections;
+package lezione5_genericsLove;
 
 /*
     Spiegazione di git e git hub
