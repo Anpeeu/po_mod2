@@ -1,0 +1,17 @@
+package myjdk;
+
+/**
+ *
+ * @param <T>
+ */
+public interface MyCollection <T> extends MyIterable<T> {
+    void add(T x);
+    int size ();
+    boolean contains( T x);
+    boolean remove(T x);
+    void clear();
+    default boolean isEmpty() {
+        return size() == 0;
+    }
+
+}
